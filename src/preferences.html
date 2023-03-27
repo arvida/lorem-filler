@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Preferences</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  background-color: #fff;
+  margin: 0;
+  padding: 0 10px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+a {
+  color: #007bff;
+}
+
+
+#preferences,
+#about,
+#top-nav
+{
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+#about,
+#preferences {
+  padding: 0 20px;
+}
+
+#about {
+  line-height: 1.5;
+}
+
+#top-nav {
+  background-color: #fff;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#top-nav span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+#top-nav a {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333; margin: 20px;
+}
+#top-nav a:hover {
+  color: #007bff;
+}
+#top-nav .selected {
+  text-decoration: none;
+  color: #007bff;
+}
+#top-nav img {
+  margin-right: 10px;
+  height: 32px;
+  width: 32px;
+  vertical-align: middle;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 3px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: block;
+  margin: 0 0 0 0;
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 10px 0;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 40px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px;
+}
+
+th:last-child,
+td:last-child {
+  width: 50px;
+}
+
+tr:nth-child(even) {
+ background-color: #f9f9f9;
+}
+
+#about h1 {
+  paddin-bottom: 0;
+  margin-bottom: 0;
+}
+.version {
+  color: #999;
+  margin-top: 0;
+  padding-top: 0;
+}
+.more-about {
+  margin-top: 20px;
+  font-size: 16px;
+}
+#phrase {
+  margin-top: 30px;
+  color: #999;
+  text-align: center;
+  font-style: italic;
+  font-family: Georgia, serif;
+}
+</style>
+  </head>
+  <body>
+    <nav id="top-nav">
+      <span><img src="icon5.png" width="32" height="32">LoremFiller</span>
+      <a href="#preferences">Preferences</a>
+      <a href="#about">About</a>
+    </nav>
+    <div id="content">
+      <div id="preferences">
+        <h1>Preferences</h1>
+        <h2>Custom options</h2>
+        <div>
+          <p>Add custom options that will be available in the LoremFiller menu.</p>
+          <form id="add-option-form">
+            <label for="option-name">Name</label>
+            <input type="text" id="option-name" required>
+            <br>
+            <label for="option-text">Text</label>
+            <textarea id="option-text" rows="3" cols="60" required></textarea>
+            <br>
+            <button type="submit">Add option</button>
+          </form>
+
+          <table>
+            <tbody id="option-list">
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="about" style="display: none;">
+        <h1>LoremFiller</h1>
+        <p class="version">Version: 1.0</p>
+        <div class="more-about">
+          <p>
+          Quickly insert Lorem Ipsum text into text fields on webpages.
+          A handy browser tool for developers and designers when doing mockups, testing and prototypes.
+          </p>
+          <p>
+            Built by <a href="http://arvidandersson.se" target="_blank">Arvid Andersson</a><br>
+            Follow me on <a href="https://twitter.com/arvid_a" target="_blank">Twitter</a><br>
+            <a href="mailto:arvid.andersson@gmail.com">Get in touch for questions or suggestions</a>
+          </p>
+          <p>
+          <strong>Do you find LoremFiller useful?</strong><br>Consider donating to support the development of this extension:<br>
+            <a href="https://www.buymeacoffee.com/arvida" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="margin-top: 20px;height: 60px !important;width: 217px !important;" ></a>
+          </p>
+          <p id="phrase">
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="preferences.js"></script>
+  </body>
+</html>

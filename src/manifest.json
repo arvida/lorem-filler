@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "LoremFiller",
+  "version": "1.2",
+  "description": "Insert Lorem Ipsum text into input fields.",
+  "icons": { "48": "icon5.png" },
+  "permissions": ["contextMenus", "storage"],
+  "background": { "scripts": ["background.js"] },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"]
+    }
+  ]
+}

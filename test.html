@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lorem Ipsum Demo Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
+    />
+    <style>
+      .fake-toolbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f7f7f7;
+        border: 1px solid #ccc;
+        padding: 5px;
+      }
+
+      .fake-toolbar button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin: 0 5px;
+      }
+
+      .fake-toolbar button:hover {
+        text-decoration: underline;
+      }
+
+      .contenteditable {
+        min-height: 300px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body class="p-12 bg-purple-900">
+    <div class="max-w-3xl mx-auto bg-white rounded shadow p-4">
+      <div class="p-4 border-b">
+        <h1 class="text-3xl font-bold text-gray-800">New article</h1>
+      </div>
+      <div class="p-4">
+        <div class="mb-4">
+          <label for="header" class="block text-gray-700 font-bold mb-2">
+            Title
+          </label>
+          <input
+            type="text"
+            id="header"
+            name="header"
+            class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Enter title..."
+          />
+        </div>
+        <div class="mb-4">
+          <label for="intro" class="block text-gray-700 font-bold mb-2">
+            Intro
+          </label>
+          <textarea
+            id="intro"
+            name="intro"
+            class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Enter intro..."
+            rows="4"
+          ></textarea>
+        </div>
+        <div class="mb-4">
+          <label for="body" class="block text-gray-700 font-bold mb-2">
+            Body
+          </label>
+          <!-- <div class="fake-toolbar mb-2 text-sm"> -->
+          <!--   <button><span>&#x1D5D9;</span></button> -->
+          <!--   <button><span>&#x1D5D4;</span></button> -->
+          <!--   <button><span>&#x1D5C4;</span></button> -->
+          <!--   <button><span>&#x1F517;</span></button> -->
+          <!-- </div> -->
+          <div
+            id="body"
+            contenteditable="true"
+            class="contenteditable appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Enter body..."
+            rows="8"
+          ></div>
+          <button class="mt-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Save article</button>
+          <a href="#" class="underline ml-5">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
